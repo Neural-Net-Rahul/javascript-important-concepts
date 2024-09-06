@@ -1,2 +1,2 @@
-# middleware-globalCatches-zod
+# javascript-important-concepts
 Covered concepts : Middleware, Global Catches, Zod
