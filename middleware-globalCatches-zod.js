@@ -37,6 +37,7 @@ const userSchema = zod.object({
 })
 
 /*
+req.body =>
 {
     "name":"Rahul",
     "age":20,
