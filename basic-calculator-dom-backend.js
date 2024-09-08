@@ -1,0 +1,37 @@
+<!-- Server Code
+const express = require("express");
+const cors = require("cors");
+const app = express();
+app.use(express.json());
+app.use(cors());
+
+const port = 3000;
+
+app.get("/sum",function(req,res){
+    const a = req.query.a;
+    const b = req.query.b;
+    res.send(`Sum is ${parseInt(a)+parseInt(b)}`);
+})
+
+app.listen(port,function(req,res){
+    console.log("Server is running on port : ",port);
+}) -->
+<html>
+    <head>
+        <title>Calculator</title>
+    </head>
+    <body>
+        <input oninput="calcSum()" id="value1" type="text" placeholder="value 1"><br><br>
+        <input oninput="calcSum()" id="value2" type="text" placeholder="value 2"><br><br>
+        <div id="finalSum"></div>
+        <script>
+            async function calcSum(){
+                const a = document.querySelector("#value1").value;
+                const b = document.querySelector("#value2").value;
+                const value = await fetch(`http://localhost:3000/sum/?a=${a}&b=${b}`);
+                const ans = await value.text();
+                document.getElementById("finalSum").innerHTML = ans;
+            }
+        </script>
+    </body>
+</html>
