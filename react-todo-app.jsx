@@ -48,7 +48,8 @@ function App(){
       <h4>List of Tasks</h4>
       {todos.map(todo => 
         <div style={{ textDecoration: todo.completed ? 'line-through' : 'none' }}>
-          <b>Title :</b> {todo.title} <br /><b>Description :</b> {todo.description} <br /><button onClick={()=> editTodo(todo.id)}>Edit</button><button onClick={() => removeTodo(todo.id)}>Remove</button><input type="checkbox" checked={todo.completed} onClick={()=>strikeThroughContent(todo.id)}/><br /><br /></div>
+          <b>Title :</b> {todo.title} <br /><b>Description :</b> {todo.description} <br /><button onClick={()=> editTodo(todo.id)}>Edit</button><button onClick={() => removeTodo(todo.id)}>Remove</button>
+          <input type="checkbox" checked={todo.completed} onClick={()=>strikeThroughContent(todo.id)}/><br /><br /></div>
       )}
     </>
   )
