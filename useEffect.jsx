@@ -34,37 +34,35 @@ function ShowTodos({title, desc}){
 export default App;
 
 
+// main.js
+// const express = require("express");
+// const app = express();
+// const cors = require("cors");
+// app.use(cors());
 
-/*
-/* main.js */
-const express = require("express");
-const app = express();
-const cors = require("cors");
-app.use(cors());
+// app.use(express.json());
 
-app.use(express.json());
+// const todos = [
+//   {
+//     title: "Buy Grocery",
+//     description: "Buy groceries from nearby store",
+//   },
+//   {
+//     title: "Buy food items",
+//     description: "Buy maggi, pasta, cheeze cake",
+//   },
+//   {
+//     title: "Complete homework",
+//     description: "I don't know about the homework",
+//   },
+// ];
 
-const todos = [
-  {
-    title: "Buy Grocery",
-    description: "Buy groceries from nearby store",
-  },
-  {
-    title: "Buy food items",
-    description: "Buy maggi, pasta, cheeze cake",
-  },
-  {
-    title: "Complete homework",
-    description: "I don't know about the homework",
-  },
-];
+// app.get("/todos", function (req, res) {
+//   res.json(todos);
+// });
 
-app.get("/todos", function (req, res) {
-  res.json(todos);
-});
+// app.listen(3000, function () {
+//   console.log("Port is running on 3000");
+// });
 
-app.listen(3000, function () {
-  console.log("Port is running on 3000");
-});
 
-*/
