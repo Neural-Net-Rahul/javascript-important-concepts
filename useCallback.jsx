@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useMemo, memo, useCallback } from "react";
-
+// useCallback => because of which function does not gets recreated
 function App() {
   const [count,setCount] = useState(0);
   const a = useCallback(function a(){
