@@ -28,9 +28,11 @@ app.listen(port,function(req,res){
         <script>
             async function calcSum(){
                 const c = document.querySelector("#value1").value;
+                const d = document.querySelector('#value2').value;
                 const b = document.querySelector("#value2").value;
                 const value = await fetch(`http://localhost:3000/sum/?a=${c}&b=${b}`);
                 const ans = await value.text();
+                console.log(d);
                 document.getElementById("finalSum").innerHTML = ans;
             }
         </script>
